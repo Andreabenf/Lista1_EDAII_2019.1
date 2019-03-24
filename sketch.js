@@ -25,14 +25,13 @@ function draw() {
     noStroke();
     fill(200, 122, 200, 100);
     ellipse(x, x, 200);
-    for (let j = 0; j < numeroElementos; j++) {
-        lista[j].verde = true;
-        for (let i = 0; i < numeroElementos; i++) {
-            lista[i].show();
+    let rand = floor(random(0, numeroElementos));
+    lista[rand].change();
+    for (let i = 0; i < numeroElementos; i++) {
+        lista[i].show();
 
-        }
-        lista[j].verde = false;
     }
+
     x++;
 
 
@@ -49,7 +48,15 @@ class Retangulo {
 
     constructor(x) {
         this.x = x;
-        this.verde = false;
+        this.verde;
+    }
+
+    change() {
+        if (this.verde) {
+            this.verde = false;
+        } else {
+            this.verde = true;
+        }
     }
 
     move() {
