@@ -13,11 +13,6 @@ function setup() {
         onde = onde + xDosElementos + 1;
 
     }
-
-
-
-
-
 }
 
 function draw() {
@@ -31,21 +26,10 @@ function draw() {
         lista[i].show();
 
     }
-
     x++;
-
-
-}
-
-function mouseClicked() {
-    background(10, 20500, 200);
-    fill(0, 0, 250);
 }
 
 class Retangulo {
-
-
-
     constructor(x) {
         this.x = x;
         this.verde;
